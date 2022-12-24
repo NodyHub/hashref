@@ -13,12 +13,12 @@ import (
 )
 
 var CLI struct {
-	Config    string `short:"c" optional:"" type:"path" help:"Path to hashref config (default: ~/.hashref), can be overwritten by environment."`
-	Details   bool   `short:"d" optional:"" help:"Show details to hash. The fiel \"success\" will be added to the json, even if not stored on the server."`
+	Config    string `short:"c" optional:"" type:"path" help:"Path to hashref config (default: ~/.hashref). Fields can be overwritten in environment."`
+	Details   bool   `short:"d" optional:"" help:"Show details to hash."`
 	Generate  bool   `short:"g" optional:"" help:"Generate client configuration"`
 	Meta      string `short:"m" optional:"" type:"path" help:"Read metadata from JSON file, comma separated file list, existing keys are overwritten. Empty values are removed from metadata."`
 	Remove    bool   `short:"r" optional:"" help:"Remove hash from db"`
-	Set       bool   `short:"s" optional:"" help:"Set metadata for input. (Extends/update existing)"`
+	Set       bool   `short:"s" optional:"" help:"Set metadata for input/self."`
 	Self      bool   `optional:"" help:"Set/get metadata to yourself"`
 	Output    string `short:"o" optional:"" help:"Specify output" type:"path"`
 	Publisher string `short:"p" optional:"" help:"Limit request to data from publisher"`
