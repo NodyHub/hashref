@@ -20,9 +20,9 @@ var CLI struct {
 	Remove    bool   `short:"r" optional:"" help:"Remove hash from db"`
 	Set       bool   `short:"s" optional:"" help:"Set metadata for input/self."`
 	Self      bool   `optional:"" help:"Set/get metadata to yourself"`
-	Output    string `short:"o" optional:"" help:"Specify output" type:"path"`
-	Publisher string `short:"p" optional:"" help:"Limit request to data from publisher"`
-	Verbose   bool   `short:"v" optional:"" help:"Show verbose output"`
+	Output    string `short:"o" optional:"" help:"Specify output (default: STDERR, - for STDOUT)" type:"path"`
+	Publisher string `short:"p" optional:"" help:"Restrict result to publisher"`
+	Verbose   bool   `short:"v" optional:"" help:"Verbose output"`
 	Yes       bool   `short:"y" optional:"" help:"Always confirm"`
 
 	Input []string `arg:"" name:"input" optional:"" help:"Files, strings, hashes"`
