@@ -149,6 +149,9 @@ func main() {
 				fmt.Fprintf(output, "%v not removed :(\n", input)
 			}
 		}
+
+		// Quit cli, action done
+		return
 	}
 
 	// iterate over input
@@ -217,7 +220,7 @@ func main() {
 					}
 
 				} else {
-					// Check if for dedicated publisher before fetch remote data
+					// Check if request is for dedicated publisher before fetch remote data
 					var success bool
 					var meta map[string]interface{}
 
